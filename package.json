@@ -1,0 +1,39 @@
+{
+  "name": "marketing-engineer-portfolio",
+  "version": "1.0.0",
+  "description": "A cinematic portfolio site with a Sanity-managed blog and brand content.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "studio": "sanity dev --host 127.0.0.1 --port 3333",
+    "studio:build": "sanity build",
+    "seed": "node ./studio/seed.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ztexleon02-debug/Muhammad-the-Marketing-Engineer.git"
+  },
+  "keywords": [
+    "portfolio",
+    "sanity",
+    "marketing-engineer"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ztexleon02-debug/Muhammad-the-Marketing-Engineer/issues"
+  },
+  "homepage": "https://github.com/ztexleon02-debug/Muhammad-the-Marketing-Engineer#readme",
+  "dependencies": {
+    "@sanity/client": "^7.22.0",
+    "dotenv": "^17.4.2",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "sanity": "^5.24.0",
+    "styled-components": "^6.4.1",
+    "vite": "^7.3.2"
+  }
+}
