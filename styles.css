@@ -208,12 +208,44 @@ main {
 }
 
 .hero {
+  position: relative;
   display: grid;
   grid-template-columns: 1.08fr 0.92fr;
   gap: 2.2rem;
   align-items: center;
   min-height: calc(100vh - 6rem);
   padding-top: 2.8rem;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -4rem -2rem -2rem;
+  z-index: -2;
+  background-image: url("./assets/hero-emotes.jpg");
+  background-position: center;
+  background-size: cover;
+  filter: saturate(0.72) blur(1px);
+  opacity: 0.16;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: -4rem -2rem -2rem;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(253, 247, 241, 0.96) 0%, rgba(253, 247, 241, 0.88) 42%, rgba(253, 247, 241, 0.7) 100%),
+    radial-gradient(circle at 30% 38%, rgba(255, 255, 255, 0.86), transparent 30%),
+    linear-gradient(180deg, rgba(247, 240, 231, 0.68), rgba(234, 220, 204, 0.78));
+}
+
+.hero-copy,
+.hero-visual {
+  position: relative;
+  z-index: 1;
 }
 
 .eyebrow,
@@ -244,6 +276,7 @@ main {
   gap: 0.1em;
   font-size: clamp(3.8rem, 8vw, 7.1rem);
   line-height: 0.93;
+  text-shadow: 0 2px 18px rgba(255, 252, 248, 0.8);
 }
 
 .hero-accent {
