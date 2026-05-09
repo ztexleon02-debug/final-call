@@ -3,5 +3,7 @@ dist/
 dist-verify/
 dist-live/
 .env
+.env.local
+.env.*.local
 .sanity/
 *.log

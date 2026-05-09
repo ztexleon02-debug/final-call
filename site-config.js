@@ -1,5 +1,5 @@
 export const SANITY_CONFIG = {
-  projectId: "8i1csvd3",
-  dataset: "production",
+  projectId: import.meta.env.VITE_SANITY_PROJECT_ID || "",
+  dataset: import.meta.env.VITE_SANITY_DATASET || "production",
   apiVersion: "2026-05-07",
 };
