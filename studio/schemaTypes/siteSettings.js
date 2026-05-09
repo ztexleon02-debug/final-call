@@ -30,6 +30,15 @@ export const siteSettingsType = defineType({
     defineField({ name: "heroTitleAccent", title: "Hero Title Accent", type: "string" }),
     defineField({ name: "heroTitleTail", title: "Hero Title Tail", type: "string" }),
     defineField({ name: "heroDescription", title: "Hero Description", type: "text", rows: 4 }),
+    defineField({
+      name: "heroBackgroundImage",
+      title: "Hero Background Image",
+      type: "image",
+      description: "Optional subtle hero background. Remove this image to hide the hero artwork.",
+      options: {
+        hotspot: true,
+      },
+    }),
     defineField({ name: "storyHeading", title: "Story Heading", type: "string" }),
     defineField({
       name: "storyCards",

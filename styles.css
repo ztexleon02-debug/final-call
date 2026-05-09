@@ -224,11 +224,15 @@ main {
   position: absolute;
   inset: -4rem -2rem -2rem;
   z-index: -2;
-  background-image: url("./assets/hero-emotes.jpg");
+  background-image: var(--hero-bg-image);
   background-position: center;
   background-size: cover;
   filter: saturate(0.72) blur(1px);
   opacity: 0.16;
+}
+
+.hero[data-has-hero-image="false"]::before {
+  opacity: 0;
 }
 
 .hero::after {

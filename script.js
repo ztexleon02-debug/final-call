@@ -10,6 +10,7 @@ const fallbackContent = {
     heroTitleTail: "for the AI era.",
     heroDescription:
       "Rebranding from marketing manager to marketing engineer: blending strategy, automation, storytelling, data, and product thinking into marketing systems that feel elevated and actually compound.",
+    heroBackgroundImageUrl: "./assets/hero-emotes.jpg",
     storyHeading: "From managing campaigns to engineering momentum.",
     storyCards: [
       {
@@ -455,6 +456,17 @@ function renderContent(content) {
   const brandInitials = document.querySelector("[data-brand-initials]");
   if (brandInitials) brandInitials.textContent = initialsFromName(settings.name);
 
+  const hero = document.querySelector(".hero");
+  if (hero) {
+    if (settings.heroBackgroundImageUrl) {
+      hero.style.setProperty("--hero-bg-image", `url("${settings.heroBackgroundImageUrl}")`);
+      hero.dataset.hasHeroImage = "true";
+    } else {
+      hero.style.removeProperty("--hero-bg-image");
+      hero.dataset.hasHeroImage = "false";
+    }
+  }
+
   applyLink("[data-contact-email]", `mailto:${settings.contactEmail}`, settings.contactEmail);
   applyLink("[data-contact-linkedin]", settings.linkedinUrl, "LinkedIn");
   applyLink("[data-contact-instagram]", settings.instagramUrl, "Instagram");
@@ -528,6 +540,8 @@ function openPost(post) {
 function normalizeSanityPayload(raw) {
   if (!raw?.settings) return fallbackContent;
   const settings = { ...fallbackContent.settings, ...raw.settings };
+  settings.heroBackgroundImageUrl =
+    raw.settings.heroBackgroundImage?.asset?.url || raw.settings.heroBackgroundImageUrl || "";
   const posts = Array.isArray(raw.posts) && raw.posts.length ? raw.posts : fallbackContent.posts;
   return { settings, posts };
 }
@@ -536,7 +550,14 @@ function getSanityQueryUrl() {
   if (!config.projectId || !config.dataset) return null;
 
   const query = encodeURIComponent(`{
-    "settings": *[_type == "siteSettings" && _id == "siteSettings"][0],
+    "settings": *[_type == "siteSettings" && _id == "siteSettings"][0] {
+      ...,
+      heroBackgroundImage {
+        asset-> {
+          url
+        }
+      }
+    },
     "posts": *[_type == "post"] | order(publishedAt desc) {
       _id,
       title,
