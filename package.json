@@ -1,7 +1,7 @@
 {
-  "name": "marketing-engineer-portfolio",
+  "name": "final-call",
   "version": "1.0.0",
-  "description": "A cinematic portfolio site with a Sanity-managed blog and brand content.",
+  "description": "Final Call website powered by Sanity CMS and prepared for Vercel deployment.",
   "private": true,
   "type": "module",
   "scripts": {
@@ -14,19 +14,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ztexleon02-debug/muhammad-the-marketing-engineer-site.git"
+    "url": "git+https://github.com/ztexleon02-debug/final-call.git"
   },
   "keywords": [
-    "portfolio",
+    "final-call",
     "sanity",
-    "marketing-engineer"
+    "vercel"
   ],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ztexleon02-debug/muhammad-the-marketing-engineer-site/issues"
+    "url": "https://github.com/ztexleon02-debug/final-call/issues"
   },
-  "homepage": "https://github.com/ztexleon02-debug/muhammad-the-marketing-engineer-site#readme",
+  "homepage": "https://github.com/ztexleon02-debug/final-call#readme",
   "dependencies": {
     "@sanity/client": "^7.22.0",
     "dotenv": "^17.4.2",
