@@ -1,0 +1,100 @@
+{
+  "_id": "siteSettings",
+  "_type": "siteSettings",
+  "name": "Muhammad bin Tariq",
+  "role": "Marketing Engineer",
+  "tagline": "A seriously good",
+  "heroTitleLead": "Marketing",
+  "heroTitleAccent": "Engineer",
+  "heroTitleTail": "Final Call",
+  "heroDescription": "Building the brand systems, AI workflows, and growth experiences that make modern marketing feel sharper, calmer, and more inevitable.",
+  "storyHeading": "From campaign execution to systems-led brand building.",
+  "storyCards": [
+    {
+      "_key": "then",
+      "label": "Then",
+      "title": "Marketing Operator",
+      "description": "I learned how to plan campaigns, read audiences, shape positioning, and move from concept to launch without losing clarity.",
+      "featured": false
+    },
+    {
+      "_key": "now",
+      "label": "Now",
+      "title": "Marketing Engineer",
+      "description": "I build the operating layer underneath the message: AI-assisted workflows, repeatable systems, elegant automations, and clearer decision loops.",
+      "featured": true
+    },
+    {
+      "_key": "next",
+      "label": "Next",
+      "title": "Modern Brand Builder",
+      "description": "The goal is not more content. The goal is a brand that moves with more precision, more taste, and more leverage.",
+      "featured": false
+    }
+  ],
+  "capabilitiesHeading": "Designed for brands that need both taste and throughput.",
+  "capabilities": [
+    {
+      "_key": "cap1",
+      "index": "01",
+      "title": "AI Workflow Design",
+      "description": "Research loops, drafting systems, prompt structures, and review layers that increase speed without flattening quality."
+    },
+    {
+      "_key": "cap2",
+      "index": "02",
+      "title": "Marketing Systems",
+      "description": "Campaign architecture, lifecycle thinking, and operating logic that turns one-off execution into repeatable momentum."
+    },
+    {
+      "_key": "cap3",
+      "index": "03",
+      "title": "Creative Direction",
+      "description": "Visual taste, messaging structure, and interaction details that make the work feel intentional instead of assembled."
+    },
+    {
+      "_key": "cap4",
+      "index": "04",
+      "title": "Growth With Restraint",
+      "description": "Performance-minded decisions shaped by brand discipline, customer empathy, and a long-term point of view."
+    }
+  ],
+  "corePerspectiveTitle": "The strongest marketers of the next era will think like builders, not just communicators.",
+  "corePerspectiveBody": "That means understanding story and systems at the same time: what the brand says, how the machine runs, and where leverage compounds.",
+  "visionHeading": "A personal practice built like a product with a point of view.",
+  "visionCards": [
+    {
+      "_key": "v1",
+      "label": "Positioning",
+      "title": "A marketing engineer for modern businesses.",
+      "description": "Not someone using AI for spectacle, but someone integrating it into strategy, workflows, execution, and better decision-making."
+    },
+    {
+      "_key": "v2",
+      "label": "Aesthetic",
+      "title": "Editorial, minimal, cinematic, quietly premium.",
+      "description": "Large typography, measured motion, strong spacing, and surfaces that feel polished without becoming loud."
+    },
+    {
+      "_key": "v3",
+      "label": "Promise",
+      "title": "Build sharper systems without losing brand soul.",
+      "description": "The work should feel more modern and more human at the same time, with clarity doing the heavy lifting."
+    }
+  ],
+  "blogHeading": "Notes on modern marketing, systems, AI, and brand taste.",
+  "blogIntro": "A small journal for ideas, operating principles, and observations about what great next-generation marketing should actually feel like.",
+  "quote": "The real edge is not publishing faster. It is designing better systems for clearer thinking, better timing, and stronger brand decisions.",
+  "contactHeading": "If your brand is evolving, the operating system behind it should evolve too.",
+  "contactEmail": "hello@example.com",
+  "linkedinUrl": "https://www.linkedin.com",
+  "instagramUrl": "https://www.instagram.com",
+  "marqueeItems": [
+    "Brand Systems",
+    "AI Workflows",
+    "Lifecycle Thinking",
+    "Creative Direction",
+    "Automation Design",
+    "Editorial Taste"
+  ]
+}

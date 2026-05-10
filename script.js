@@ -9,99 +9,97 @@ const fallbackContent = {
     heroTitleAccent: "Engineer",
     heroTitleTail: "Final Call",
     heroDescription:
-      "A cinematic, minimal first impression built for a marketing engineer who works where brand taste, AI systems, and modern growth meet.",
-    heroBackgroundImageUrl: "/final-call-sequence-1/ezgif-frame-001.jpg",
-    storyHeading: "From managing campaigns to engineering momentum.",
+      "Building the brand systems, AI workflows, and growth experiences that make modern marketing feel sharper, calmer, and more inevitable.",
+    storyHeading: "From campaign execution to systems-led brand building.",
     storyCards: [
       {
         label: "Then",
-        title: "Marketing Manager",
+        title: "Marketing Operator",
         description:
-          "I learned how to shape campaigns, read audiences, lead execution, and translate attention into growth.",
+          "I learned how to plan campaigns, read audiences, shape positioning, and move from concept to launch without losing clarity.",
       },
       {
         label: "Now",
         title: "Marketing Engineer",
         description:
-          "I design the machines behind the message: AI-assisted workflows, systems thinking, automation, data clarity, and high-leverage customer journeys.",
+          "I build the operating layer underneath the message: AI-assisted workflows, repeatable systems, elegant automations, and clearer decision loops.",
         featured: true,
       },
       {
         label: "Next",
-        title: "Future-Ready Builder",
+        title: "Modern Brand Builder",
         description:
-          "My edge is not just keeping up with technology, but turning it into human-centered, brand-safe, performance-driven execution.",
+          "The goal is not more content. The goal is a brand that moves with more precision, more taste, and more leverage.",
       },
     ],
-    capabilitiesHeading: "Where marketing taste meets technical leverage.",
+    capabilitiesHeading: "Designed for brands that need both taste and throughput.",
     capabilities: [
       {
         index: "01",
-        title: "AI-Native Marketing",
+        title: "AI Workflow Design",
         description:
-          "Designing prompt systems, research workflows, and content engines that increase output without lowering quality.",
+          "Research loops, drafting systems, prompt structures, and review layers that increase speed without flattening quality.",
       },
       {
         index: "02",
-        title: "Automation Architecture",
+        title: "Marketing Systems",
         description:
-          "Connecting tools, triggers, and repeatable operating systems so campaigns scale with less friction.",
+          "Campaign architecture, lifecycle thinking, and operating logic that turns one-off execution into repeatable momentum.",
       },
       {
         index: "03",
-        title: "Creative Systems Design",
+        title: "Creative Direction",
         description:
-          "Building assets, experiences, and motion that feel premium, modern, and aligned with a sharper brand narrative.",
+          "Visual taste, messaging structure, and interaction details that make the work feel intentional instead of assembled.",
       },
       {
         index: "04",
-        title: "Growth With Elegance",
+        title: "Growth With Restraint",
         description:
-          "Performance matters, but so does feel. I create journeys that convert while still feeling thoughtful and human.",
+          "Performance-minded decisions shaped by brand discipline, customer empathy, and a long-term point of view.",
       },
     ],
     corePerspectiveTitle:
-      "The future of marketing belongs to people who can think in both narratives and systems.",
+      "The strongest marketers of the next era will think like builders, not just communicators.",
     corePerspectiveBody:
-      "I work at that intersection: brand instinct, analytical clarity, product logic, and AI fluency.",
-    visionHeading: "A personal brand built like a living product.",
+      "That means understanding story and systems at the same time: what the brand says, how the machine runs, and where leverage compounds.",
+    visionHeading: "A personal practice built like a product with a point of view.",
     visionCards: [
       {
         label: "Positioning",
-        title: "Marketing engineer for the next wave of business.",
+        title: "A marketing engineer for modern businesses.",
         description:
-          "Not just someone who uses AI, but someone who understands how to integrate it into strategy, workflows, and growth models.",
+          "Not someone using AI for spectacle, but someone integrating it into strategy, workflows, execution, and better decision-making.",
       },
       {
         label: "Aesthetic",
-        title: "Clean, cozy, cinematic, quietly futuristic.",
+        title: "Editorial, minimal, cinematic, quietly premium.",
         description:
-          "Soft gradients, tactile surfaces, bold modern type, and motion that feels satisfying rather than loud.",
+          "Large typography, measured motion, strong spacing, and surfaces that feel polished without becoming loud.",
       },
       {
         label: "Promise",
-        title: "I help brands modernize without losing their soul.",
+        title: "Build sharper systems without losing brand soul.",
         description:
-          "Tech-forward execution, but with emotional intelligence, narrative discipline, and customer empathy at the center.",
+          "The work should feel more modern and more human at the same time, with clarity doing the heavy lifting.",
       },
     ],
-    blogHeading: "Thinking at the edge of marketing, systems, and AI.",
+    blogHeading: "Notes on modern marketing, systems, AI, and brand taste.",
     blogIntro:
-      "Short essays on what the next generation of marketing should feel like, build like, and optimize for.",
+      "A small journal for ideas, operating principles, and observations about what great next-generation marketing should actually feel like.",
     quote:
-      "The best marketing in the future won't feel like more noise. It will feel like better systems, better timing, better taste, and better understanding.",
-    contactHeading: "Ready to build the future-facing version of your brand?",
+      "The real edge is not publishing faster. It is designing better systems for clearer thinking, better timing, and stronger brand decisions.",
+    contactHeading: "If your brand is evolving, the operating system behind it should evolve too.",
     contactEmail: "hello@example.com",
     linkedinUrl: "https://www.linkedin.com",
     instagramUrl: "https://www.instagram.com",
     marqueeItems: [
-      "Brand Strategy",
+      "Brand Systems",
       "AI Workflows",
-      "Lifecycle Marketing",
+      "Lifecycle Thinking",
       "Creative Direction",
-      "Product-Led Growth",
-      "Automation Systems",
-      "Marketing Ops",
+      "Automation Design",
+      "Editorial Taste",
     ],
   },
   posts: [
@@ -111,7 +109,7 @@ const fallbackContent = {
       slug: { current: "best-marketers-think-like-engineers" },
       category: "Perspective",
       excerpt:
-        "The next generation of marketing advantage won't come from doing more. It will come from building smarter systems behind the scenes.",
+        "The next generation of marketing advantage will come from designing better systems behind the scenes, not just producing more visible output.",
       readTime: "3 min read",
       publishedAt: "2026-05-07",
       body: [
@@ -125,72 +123,6 @@ const fallbackContent = {
             },
           ],
         },
-        {
-          _type: "block",
-          style: "h3",
-          children: [{ _type: "span", text: "Taste is still the front end" }],
-        },
-        {
-          _type: "block",
-          style: "normal",
-          children: [
-            {
-              _type: "span",
-              text: "A brand still needs story, emotional intelligence, and timing. The difference is that the strongest marketers are no longer stopping at the idea. They are designing the workflow behind the idea too.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "blockquote",
-          children: [
-            {
-              _type: "span",
-              text: "The future marketer is part strategist, part operator, part systems designer.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "normal",
-          children: [
-            {
-              _type: "span",
-              text: "That means knowing how to build repeatable research loops, content pipelines, AI-assisted briefs, approval flows, and measurement habits. Not because marketing should feel robotic, but because structure gives creativity room to breathe.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          listItem: "bullet",
-          level: 1,
-          style: "normal",
-          children: [{ _type: "span", text: "Less chaos in execution" }],
-        },
-        {
-          _type: "block",
-          listItem: "bullet",
-          level: 1,
-          style: "normal",
-          children: [{ _type: "span", text: "More consistency in quality" }],
-        },
-        {
-          _type: "block",
-          listItem: "bullet",
-          level: 1,
-          style: "normal",
-          children: [{ _type: "span", text: "More leverage from the same creative energy" }],
-        },
-        {
-          _type: "block",
-          style: "normal",
-          children: [
-            {
-              _type: "span",
-              text: "This is why I love the term marketing engineer. It signals a shift from only launching campaigns to building the infrastructure that makes great campaigns sustainable.",
-            },
-          ],
-        },
       ],
     },
     {
@@ -199,7 +131,7 @@ const fallbackContent = {
       slug: { current: "ai-is-your-amplifier" },
       category: "AI Strategy",
       excerpt:
-        "Brands that win with AI won't be the ones that sound the most automated. They'll be the ones that use AI to become clearer, faster, and more intentional.",
+        "AI should strengthen a brand's clarity and operating leverage, not replace its point of view.",
       readTime: "2 min read",
       publishedAt: "2026-05-07",
       body: [
@@ -210,62 +142,6 @@ const fallbackContent = {
             {
               _type: "span",
               text: "There is a temptation right now to confuse AI output with brand value. They are not the same thing. AI can help us move faster, explore more directions, and compress production cycles, but it cannot replace the point of view behind a brand.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "h3",
-          children: [{ _type: "span", text: "Velocity is only useful with vision" }],
-        },
-        {
-          _type: "block",
-          style: "normal",
-          children: [
-            {
-              _type: "span",
-              text: "If your strategy is weak, AI can simply help you publish weak ideas faster. If your positioning is sharp, AI becomes something much more powerful: an amplifier for clarity.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          style: "blockquote",
-          children: [
-            {
-              _type: "span",
-              text: "AI should make a brand more itself, not less human.",
-            },
-          ],
-        },
-        {
-          _type: "block",
-          listItem: "bullet",
-          level: 1,
-          style: "normal",
-          children: [{ _type: "span", text: "Use AI to speed up research." }],
-        },
-        {
-          _type: "block",
-          listItem: "bullet",
-          level: 1,
-          style: "normal",
-          children: [{ _type: "span", text: "Use AI to draft first passes and spot patterns." }],
-        },
-        {
-          _type: "block",
-          listItem: "bullet",
-          level: 1,
-          style: "normal",
-          children: [{ _type: "span", text: "Use human judgment to protect taste, nuance, and trust." }],
-        },
-        {
-          _type: "block",
-          style: "normal",
-          children: [
-            {
-              _type: "span",
-              text: "That is the model I believe in. Fast systems, clear thinking, elegant execution. Not AI for spectacle. AI for better marketing.",
             },
           ],
         },
@@ -297,15 +173,6 @@ function escapeHtml(value = "") {
 
 function clamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
-}
-
-function initialsFromName(name) {
-  return name
-    .split(" ")
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part[0]?.toUpperCase() || "")
-    .join("");
 }
 
 function formatDate(dateValue) {
@@ -390,9 +257,9 @@ function renderRepeatingText(items = []) {
   return [...items, ...items].map((item) => `<span>${escapeHtml(item)}</span>`).join("");
 }
 
-function cardMarkup(card, extraClass = "") {
+function storyCardMarkup(card) {
   return `
-    <article class="${extraClass} glass reveal">
+    <article class="story-card${card.featured ? " story-card-feature" : ""} reveal">
       <p class="card-label">${escapeHtml(card.label)}</p>
       <h3>${escapeHtml(card.title)}</h3>
       <p>${escapeHtml(card.description)}</p>
@@ -402,7 +269,7 @@ function cardMarkup(card, extraClass = "") {
 
 function capabilityMarkup(item) {
   return `
-    <article class="capability-card glass reveal">
+    <article class="capability-card reveal">
       <span class="capability-index">${escapeHtml(item.index)}</span>
       <h3>${escapeHtml(item.title)}</h3>
       <p>${escapeHtml(item.description)}</p>
@@ -410,24 +277,27 @@ function capabilityMarkup(item) {
   `;
 }
 
-function blogCardMarkup(post, index) {
-  const summary = post.excerpt || `${textFromBlocks(post.body).slice(0, 180)}...`;
+function visionCardMarkup(card) {
   return `
-    <button class="blog-card glass reveal" type="button" data-post-index="${index}">
-      <div class="blog-card-top">
-        <span class="blog-card-category">${escapeHtml(post.category || "Journal")}</span>
+    <article class="vision-card reveal">
+      <p class="card-label">${escapeHtml(card.label)}</p>
+      <h3>${escapeHtml(card.title)}</h3>
+      <p>${escapeHtml(card.description)}</p>
+    </article>
+  `;
+}
+
+function blogCardMarkup(post, index) {
+  const summary = post.excerpt || `${textFromBlocks(post.body).slice(0, 190)}...`;
+  return `
+    <button class="blog-card reveal" type="button" data-post-index="${index}">
+      <div class="blog-meta">
+        <span>${escapeHtml(post.category || "Journal")}</span>
         <span>${escapeHtml(post.readTime || "Short read")}</span>
-      </div>
-      <div class="blog-card-meta">
         <span>${escapeHtml(formatDate(post.publishedAt) || "New article")}</span>
-        <span>${escapeHtml(post.slug?.current || "featured-post")}</span>
       </div>
       <h3>${escapeHtml(post.title)}</h3>
       <p>${escapeHtml(summary)}</p>
-      <div class="blog-card-footer">
-        <span>Open article</span>
-        <span>01.${String(index + 1).padStart(2, "0")}</span>
-      </div>
     </button>
   `;
 }
@@ -451,11 +321,8 @@ function renderContent(content) {
   applyText("[data-site-name]", settings.name);
   applyText("[data-site-role]", settings.role);
   applyText("[data-tagline]", settings.tagline);
-  applyText("[data-hero-minor]", settings.tagline);
   applyText("[data-hero-line-one]", settings.heroTitleLead);
   applyText("[data-hero-line-two]", settings.heroTitleAccent);
-  applyText("[data-hero-lead]", settings.heroTitleLead);
-  applyText("[data-hero-accent]", settings.heroTitleAccent);
   applyText("[data-hero-tail]", settings.heroTitleTail);
   applyText("[data-hero-description]", settings.heroDescription);
   applyText("[data-story-heading]", settings.storyHeading);
@@ -468,20 +335,6 @@ function renderContent(content) {
   applyText("[data-quote]", settings.quote);
   applyText("[data-contact-heading]", settings.contactHeading);
 
-  const brandInitials = document.querySelector("[data-brand-initials]");
-  if (brandInitials) brandInitials.textContent = initialsFromName(settings.name);
-
-  const hero = document.querySelector(".hero");
-  if (hero) {
-    if (settings.heroBackgroundImageUrl) {
-      hero.style.setProperty("--hero-bg-image", `url("${settings.heroBackgroundImageUrl}")`);
-      hero.dataset.hasHeroImage = "true";
-    } else {
-      hero.style.removeProperty("--hero-bg-image");
-      hero.dataset.hasHeroImage = "false";
-    }
-  }
-
   applyLink("[data-contact-email]", `mailto:${settings.contactEmail}`, settings.contactEmail);
   applyLink("[data-contact-linkedin]", settings.linkedinUrl, "LinkedIn");
   applyLink("[data-contact-instagram]", settings.instagramUrl, "Instagram");
@@ -491,40 +344,17 @@ function renderContent(content) {
 
   const storyGrid = document.querySelector("[data-story-grid]");
   if (storyGrid) {
-    storyGrid.innerHTML = (settings.storyCards || [])
-      .map((card) => cardMarkup(card, `story-card${card.featured ? " story-card-feature" : ""}`))
-      .join("");
+    storyGrid.innerHTML = (settings.storyCards || []).map(storyCardMarkup).join("");
   }
 
-  const capabilityLeft = document.querySelector("[data-capability-left]");
-  const capabilityRight = document.querySelector("[data-capability-right]");
-  if (capabilityLeft && capabilityRight) {
-    const capabilities = settings.capabilities || [];
-    capabilityLeft.innerHTML = capabilities.slice(0, 2).map(capabilityMarkup).join("");
-    capabilityRight.innerHTML = capabilities.slice(2).map(capabilityMarkup).join("");
-  }
-
-  const signalGrid = document.querySelector("[data-signal-grid]");
-  if (signalGrid) {
-    signalGrid.innerHTML = (settings.capabilities || [])
-      .slice(0, 3)
-      .map(
-        (item) => `
-          <article>
-            <span>${escapeHtml(item.index)}</span>
-            <strong>${escapeHtml(item.title)}</strong>
-            <p>${escapeHtml(item.description)}</p>
-          </article>
-        `
-      )
-      .join("");
+  const capabilityStack = document.querySelector("[data-capability-stack]");
+  if (capabilityStack) {
+    capabilityStack.innerHTML = (settings.capabilities || []).map(capabilityMarkup).join("");
   }
 
   const visionGrid = document.querySelector("[data-vision-grid]");
   if (visionGrid) {
-    visionGrid.innerHTML = (settings.visionCards || [])
-      .map((card) => cardMarkup(card, "vision-panel"))
-      .join("");
+    visionGrid.innerHTML = (settings.visionCards || []).map(visionCardMarkup).join("");
   }
 
   const blogGrid = document.querySelector("[data-blog-grid]");
@@ -555,8 +385,6 @@ function openPost(post) {
 function normalizeSanityPayload(raw) {
   if (!raw?.settings) return fallbackContent;
   const settings = { ...fallbackContent.settings, ...raw.settings };
-  settings.heroBackgroundImageUrl =
-    raw.settings.heroBackgroundImage?.asset?.url || raw.settings.heroBackgroundImageUrl || "";
   const posts = Array.isArray(raw.posts) && raw.posts.length ? raw.posts : fallbackContent.posts;
   return { settings, posts };
 }
@@ -565,14 +393,7 @@ function getSanityQueryUrl() {
   if (!config.projectId || !config.dataset) return null;
 
   const query = encodeURIComponent(`{
-    "settings": *[_type == "siteSettings" && _id == "siteSettings"][0] {
-      ...,
-      heroBackgroundImage {
-        asset-> {
-          url
-        }
-      }
-    },
+    "settings": *[_type == "siteSettings" && _id == "siteSettings"][0],
     "posts": *[_type == "post"] | order(publishedAt desc) {
       _id,
       title,
@@ -614,13 +435,13 @@ function setupRevealAnimations() {
       });
     },
     {
-      threshold: 0.16,
+      threshold: 0.14,
       rootMargin: "0px 0px -8% 0px",
     }
   );
 
   revealItems.forEach((item, index) => {
-    item.style.transitionDelay = `${Math.min(index * 70, 420)}ms`;
+    item.style.transitionDelay = `${Math.min(index * 55, 360)}ms`;
     observer.observe(item);
   });
 }
@@ -662,7 +483,7 @@ function setupHeroSequence() {
     const x = (bounds.width - width) / 2;
     const y = (bounds.height - height) / 2;
 
-    context.fillStyle = "#efe2d3";
+    context.fillStyle = "#ead9c9";
     context.fillRect(0, 0, bounds.width, bounds.height);
     context.drawImage(image, x, y, width, height);
   };
@@ -690,7 +511,7 @@ function setupHeroSequence() {
     const start = heroSequenceSection.offsetTop;
     const end = start + heroSequenceSection.offsetHeight - window.innerHeight;
     const progress = end <= start ? 0 : clamp((window.scrollY - start) / (end - start), 0, 1);
-    const fadeProgress = clamp(progress * 1.15, 0, 1);
+    const fadeProgress = clamp(progress * 1.1, 0, 1);
 
     heroSequenceSection.style.setProperty("--hero-progress", progress.toFixed(4));
     heroSequenceSection.style.setProperty("--hero-fade-progress", fadeProgress.toFixed(4));
@@ -743,23 +564,15 @@ function setupChrome() {
     () => {
       if (!header) return;
       if (window.scrollY > 32) {
-        header.style.background = "rgba(255, 248, 241, 0.7)";
-        header.style.boxShadow = "0 18px 52px rgba(57, 36, 22, 0.16)";
+        header.style.background = "rgba(255, 251, 246, 0.82)";
+        header.style.boxShadow = "0 20px 48px rgba(49, 30, 21, 0.12)";
       } else {
-        header.style.background = "rgba(255, 248, 241, 0.56)";
-        header.style.boxShadow = "0 18px 44px rgba(57, 36, 22, 0.09)";
+        header.style.background = "rgba(255, 251, 246, 0.7)";
+        header.style.boxShadow = "0 18px 42px rgba(53, 33, 22, 0.08)";
       }
     },
     { passive: true }
   );
-
-  document.addEventListener("pointermove", (event) => {
-    const { clientX, clientY } = event;
-    const x = (clientX / window.innerWidth - 0.5) * 18;
-    const y = (clientY / window.innerHeight - 0.5) * 18;
-    document.documentElement.style.setProperty("--pointer-x", `${x}px`);
-    document.documentElement.style.setProperty("--pointer-y", `${y}px`);
-  });
 
   closeDialogButton?.addEventListener("click", () => dialog?.close());
   dialog?.addEventListener("click", (event) => {
