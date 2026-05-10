@@ -634,6 +634,7 @@ function setupHeroSequence() {
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const frames = new Array(heroSequenceConfig.frameCount);
   let currentFrame = 0;
+  let desiredFrame = 0;
   let resizeFrame = null;
   let scrollFrame = null;
 
@@ -668,7 +669,18 @@ function setupHeroSequence() {
 
   const renderFrameAt = (index) => {
     const safeIndex = clamp(index, 0, heroSequenceConfig.frameCount - 1);
-    const image = frames[safeIndex] || frames[currentFrame];
+    desiredFrame = safeIndex;
+
+    let image = frames[safeIndex];
+    if (!image) {
+      for (let cursor = safeIndex - 1; cursor >= 0; cursor -= 1) {
+        if (frames[cursor]) {
+          image = frames[cursor];
+          break;
+        }
+      }
+    }
+
     if (!image) return;
     currentFrame = safeIndex;
     drawFrame(image);
@@ -707,11 +719,10 @@ function setupHeroSequence() {
   for (let index = 0; index < heroSequenceConfig.frameCount; index += 1) {
     const image = new Image();
     image.decoding = "async";
-    image.loading = index < 6 ? "eager" : "lazy";
     image.src = heroSequenceConfig.framePath(index);
     image.addEventListener("load", () => {
       frames[index] = image;
-      if (index === 0 || index === currentFrame) {
+      if (index === 0 || index === desiredFrame || index === currentFrame) {
         drawFrame(image);
       }
     });

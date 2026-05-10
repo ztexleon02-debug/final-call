@@ -7,3 +7,5 @@ dist-live/
 .env.*.local
 .sanity/
 *.log
+
+.vercel
