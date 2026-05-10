@@ -2,15 +2,15 @@ import { SANITY_CONFIG } from "./site-config.js";
 
 const fallbackContent = {
   settings: {
-    name: "Your Name",
+    name: "Muhammad bin Tariq",
     role: "Marketing Engineer",
-    tagline: "Future of Marketing Expert",
-    heroTitleLead: "I engineer",
-    heroTitleAccent: "modern growth",
-    heroTitleTail: "for the AI era.",
+    tagline: "A seriously good",
+    heroTitleLead: "Marketing",
+    heroTitleAccent: "Engineer",
+    heroTitleTail: "Final Call",
     heroDescription:
-      "Rebranding from marketing manager to marketing engineer: blending strategy, automation, storytelling, data, and product thinking into marketing systems that feel elevated and actually compound.",
-    heroBackgroundImageUrl: "./assets/hero-emotes.jpg",
+      "A cinematic, minimal first impression built for a marketing engineer who works where brand taste, AI systems, and modern growth meet.",
+    heroBackgroundImageUrl: "/final-call-sequence-1/ezgif-frame-001.jpg",
     storyHeading: "From managing campaigns to engineering momentum.",
     storyCards: [
       {
@@ -277,6 +277,14 @@ const fallbackContent = {
 const config = SANITY_CONFIG || {};
 const dialog = document.querySelector("[data-blog-dialog]");
 const closeDialogButton = document.querySelector("[data-close-dialog]");
+const heroSequenceSection = document.querySelector("[data-hero-sequence]");
+const sequenceCanvas = document.querySelector("[data-sequence-canvas]");
+const heroSequenceConfig = {
+  frameCount: 76,
+  framePath(index) {
+    return `/final-call-sequence-1/ezgif-frame-${String(index + 1).padStart(3, "0")}.jpg`;
+  },
+};
 
 function escapeHtml(value = "") {
   return String(value)
@@ -285,6 +293,10 @@ function escapeHtml(value = "") {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#39;");
+}
+
+function clamp(value, min, max) {
+  return Math.min(Math.max(value, min), max);
 }
 
 function initialsFromName(name) {
@@ -439,6 +451,9 @@ function renderContent(content) {
   applyText("[data-site-name]", settings.name);
   applyText("[data-site-role]", settings.role);
   applyText("[data-tagline]", settings.tagline);
+  applyText("[data-hero-minor]", settings.tagline);
+  applyText("[data-hero-line-one]", settings.heroTitleLead);
+  applyText("[data-hero-line-two]", settings.heroTitleAccent);
   applyText("[data-hero-lead]", settings.heroTitleLead);
   applyText("[data-hero-accent]", settings.heroTitleAccent);
   applyText("[data-hero-tail]", settings.heroTitleTail);
@@ -610,6 +625,105 @@ function setupRevealAnimations() {
   });
 }
 
+function setupHeroSequence() {
+  if (!heroSequenceSection || !sequenceCanvas) return;
+
+  const context = sequenceCanvas.getContext("2d", { alpha: false });
+  if (!context) return;
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const frames = new Array(heroSequenceConfig.frameCount);
+  let currentFrame = 0;
+  let resizeFrame = null;
+  let scrollFrame = null;
+
+  const drawFrame = (image) => {
+    if (!image?.complete) return;
+
+    const bounds = sequenceCanvas.getBoundingClientRect();
+    if (!bounds.width || !bounds.height) return;
+
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const targetWidth = Math.round(bounds.width * dpr);
+    const targetHeight = Math.round(bounds.height * dpr);
+
+    if (sequenceCanvas.width !== targetWidth || sequenceCanvas.height !== targetHeight) {
+      sequenceCanvas.width = targetWidth;
+      sequenceCanvas.height = targetHeight;
+    }
+
+    context.setTransform(dpr, 0, 0, dpr, 0, 0);
+    context.clearRect(0, 0, bounds.width, bounds.height);
+
+    const scale = Math.max(bounds.width / image.naturalWidth, bounds.height / image.naturalHeight);
+    const width = image.naturalWidth * scale;
+    const height = image.naturalHeight * scale;
+    const x = (bounds.width - width) / 2;
+    const y = (bounds.height - height) / 2;
+
+    context.fillStyle = "#efe2d3";
+    context.fillRect(0, 0, bounds.width, bounds.height);
+    context.drawImage(image, x, y, width, height);
+  };
+
+  const renderFrameAt = (index) => {
+    const safeIndex = clamp(index, 0, heroSequenceConfig.frameCount - 1);
+    const image = frames[safeIndex] || frames[currentFrame];
+    if (!image) return;
+    currentFrame = safeIndex;
+    drawFrame(image);
+  };
+
+  const updateProgress = () => {
+    const start = heroSequenceSection.offsetTop;
+    const end = start + heroSequenceSection.offsetHeight - window.innerHeight;
+    const progress = end <= start ? 0 : clamp((window.scrollY - start) / (end - start), 0, 1);
+    const fadeProgress = clamp(progress * 1.15, 0, 1);
+
+    heroSequenceSection.style.setProperty("--hero-progress", progress.toFixed(4));
+    heroSequenceSection.style.setProperty("--hero-fade-progress", fadeProgress.toFixed(4));
+
+    if (!prefersReducedMotion) {
+      renderFrameAt(Math.round(progress * (heroSequenceConfig.frameCount - 1)));
+    }
+  };
+
+  const queueProgressUpdate = () => {
+    if (scrollFrame) return;
+    scrollFrame = requestAnimationFrame(() => {
+      scrollFrame = null;
+      updateProgress();
+    });
+  };
+
+  const queueResize = () => {
+    if (resizeFrame) cancelAnimationFrame(resizeFrame);
+    resizeFrame = requestAnimationFrame(() => {
+      renderFrameAt(currentFrame);
+      updateProgress();
+    });
+  };
+
+  for (let index = 0; index < heroSequenceConfig.frameCount; index += 1) {
+    const image = new Image();
+    image.decoding = "async";
+    image.loading = index < 6 ? "eager" : "lazy";
+    image.src = heroSequenceConfig.framePath(index);
+    image.addEventListener("load", () => {
+      frames[index] = image;
+      if (index === 0 || index === currentFrame) {
+        drawFrame(image);
+      }
+    });
+  }
+
+  window.addEventListener("scroll", queueProgressUpdate, { passive: true });
+  window.addEventListener("resize", queueResize, { passive: true });
+
+  renderFrameAt(0);
+  updateProgress();
+}
+
 function setupChrome() {
   const header = document.querySelector(".site-header");
 
@@ -618,11 +732,11 @@ function setupChrome() {
     () => {
       if (!header) return;
       if (window.scrollY > 32) {
-        header.style.background = "rgba(255, 250, 244, 0.84)";
-        header.style.boxShadow = "0 18px 50px rgba(80, 56, 33, 0.12)";
+        header.style.background = "rgba(255, 248, 241, 0.7)";
+        header.style.boxShadow = "0 18px 52px rgba(57, 36, 22, 0.16)";
       } else {
-        header.style.background = "rgba(255, 250, 244, 0.74)";
-        header.style.boxShadow = "0 16px 40px rgba(80, 56, 33, 0.08)";
+        header.style.background = "rgba(255, 248, 241, 0.56)";
+        header.style.boxShadow = "0 18px 44px rgba(57, 36, 22, 0.09)";
       }
     },
     { passive: true }
@@ -649,4 +763,5 @@ function setupChrome() {
 }
 
 setupChrome();
+setupHeroSequence();
 loadContent().then(renderContent);
