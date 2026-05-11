@@ -319,12 +319,9 @@ function renderContent(content) {
 
   document.title = `${settings.name} | ${settings.role}`;
   applyText("[data-site-name]", settings.name);
-  applyText("[data-site-role]", settings.role);
   applyText("[data-tagline]", settings.tagline);
   applyText("[data-hero-line-one]", settings.heroTitleLead);
   applyText("[data-hero-line-two]", settings.heroTitleAccent);
-  applyText("[data-hero-tail]", settings.heroTitleTail);
-  applyText("[data-hero-description]", settings.heroDescription);
   applyText("[data-story-heading]", settings.storyHeading);
   applyText("[data-capabilities-heading]", settings.capabilitiesHeading);
   applyText("[data-core-perspective-title]", settings.corePerspectiveTitle);
@@ -465,7 +462,7 @@ function setupHeroSequence() {
     const bounds = sequenceCanvas.getBoundingClientRect();
     if (!bounds.width || !bounds.height) return;
 
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const dpr = Math.min(window.devicePixelRatio || 1, 3);
     const targetWidth = Math.round(bounds.width * dpr);
     const targetHeight = Math.round(bounds.height * dpr);
 
@@ -564,11 +561,13 @@ function setupChrome() {
     () => {
       if (!header) return;
       if (window.scrollY > 32) {
-        header.style.background = "rgba(255, 251, 246, 0.82)";
-        header.style.boxShadow = "0 20px 48px rgba(49, 30, 21, 0.12)";
+        header.style.background =
+          "linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.18)), rgba(235, 224, 212, 0.28)";
+        header.style.boxShadow = "0 22px 50px rgba(46, 28, 19, 0.1)";
       } else {
-        header.style.background = "rgba(255, 251, 246, 0.7)";
-        header.style.boxShadow = "0 18px 42px rgba(53, 33, 22, 0.08)";
+        header.style.background =
+          "linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.16)), rgba(235, 224, 212, 0.24)";
+        header.style.boxShadow = "0 20px 46px rgba(46, 28, 19, 0.08)";
       }
     },
     { passive: true }

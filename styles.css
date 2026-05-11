@@ -86,19 +86,21 @@ button {
   left: 50%;
   transform: translateX(-50%);
   z-index: 30;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+  display: flex;
   align-items: center;
-  gap: 1rem;
-  width: min(calc(100% - 2rem), 1400px);
-  padding: 0.9rem 1.15rem;
-  border: 1px solid rgba(64, 39, 26, 0.08);
+  justify-content: space-between;
+  gap: 1.25rem;
+  width: min(calc(100% - 2rem), 1360px);
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.34);
   border-radius: 999px;
-  background: rgba(255, 251, 246, 0.7);
-  backdrop-filter: blur(22px) saturate(125%);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.28), rgba(255, 255, 255, 0.16)),
+    rgba(235, 224, 212, 0.24);
+  backdrop-filter: blur(24px) saturate(145%);
   box-shadow:
-    0 18px 42px rgba(53, 33, 22, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.62);
+    0 20px 46px rgba(46, 28, 19, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.58);
 }
 
 .brand {
@@ -115,47 +117,20 @@ button {
 }
 
 .brand-role {
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
+  font-size: 0.64rem;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: rgba(74, 54, 44, 0.76);
-}
-
-.header-meta {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: rgba(90, 67, 55, 0.82);
-}
-
-.header-meta span {
-  position: relative;
-}
-
-.header-meta span + span::before {
-  content: "";
-  position: absolute;
-  left: -0.55rem;
-  top: 50%;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: rgba(98, 74, 60, 0.35);
-  transform: translateY(-50%);
+  color: rgba(74, 54, 44, 0.58);
 }
 
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 1.1rem;
+  gap: 1.4rem;
 }
 
 .site-nav a,
 .hero-kicker,
-.hero-tail,
 .section-label,
 .dialog-meta,
 .blog-meta,
@@ -166,8 +141,9 @@ button {
 
 .site-nav a {
   position: relative;
-  font-size: 0.8rem;
-  color: rgba(41, 27, 22, 0.78);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: rgba(41, 27, 22, 0.74);
 }
 
 .site-nav a::after {
@@ -195,7 +171,7 @@ main {
 
 .section {
   position: relative;
-  padding: 6.5rem 0;
+  padding: 4.4rem 0;
 }
 
 .section-shell {
@@ -229,8 +205,8 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 24rem;
-  background: linear-gradient(180deg, rgba(239, 231, 221, 0) 0%, rgba(239, 231, 221, 0.14) 38%, var(--bg) 100%);
+  height: 12rem;
+  background: linear-gradient(180deg, rgba(239, 231, 221, 0) 0%, rgba(239, 231, 221, 0.06) 42%, var(--bg) 100%);
   pointer-events: none;
   z-index: 3;
 }
@@ -252,8 +228,8 @@ main {
 .hero-stage-scrim {
   z-index: 1;
   background:
-    linear-gradient(180deg, rgba(255, 249, 241, 0.04) 0%, rgba(255, 249, 241, 0) 24%),
-    linear-gradient(0deg, rgba(24, 14, 11, 0.16) 0%, rgba(24, 14, 11, 0.02) 28%, rgba(24, 14, 11, 0) 50%);
+    linear-gradient(180deg, rgba(255, 250, 244, 0.02) 0%, rgba(255, 250, 244, 0) 18%),
+    linear-gradient(0deg, rgba(24, 14, 11, 0.05) 0%, rgba(24, 14, 11, 0.01) 20%, rgba(24, 14, 11, 0) 40%);
 }
 
 .hero-copy {
@@ -261,7 +237,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: clamp(5.8rem, 8vw, 7.5rem) clamp(1.25rem, 3vw, 2.2rem) clamp(1.8rem, 4vw, 2.5rem);
+  padding: clamp(5.6rem, 8vw, 7rem) clamp(1.15rem, 2.8vw, 2rem) clamp(1rem, 2.5vw, 1.6rem);
   opacity: calc(1 - var(--hero-fade-progress, 0) * 1.05);
   transform: translate3d(0, calc(var(--hero-fade-progress, 0) * 22px), 0);
   transition: opacity 120ms linear, transform 120ms linear;
@@ -270,16 +246,16 @@ main {
 .hero-copy-top,
 .hero-copy-bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 1rem;
 }
 
 .hero-copy-bottom {
   align-items: flex-end;
+  justify-content: space-between;
 }
 
 .hero-kicker,
-.hero-tail,
 .section-label,
 .section-caption,
 .hero-scroll-cue,
@@ -290,19 +266,14 @@ main {
 }
 
 .hero-kicker,
-.hero-tail,
 .section-label {
   margin: 0;
   font-weight: 800;
   color: rgba(61, 40, 31, 0.82);
 }
 
-.hero-tail {
-  text-align: right;
-}
-
 .hero-title-block {
-  max-width: min(100%, 980px);
+  max-width: min(100%, 760px);
 }
 
 .hero-title,
@@ -321,31 +292,25 @@ main {
 .hero-title {
   display: grid;
   gap: 0.02em;
-  font-size: clamp(3.9rem, 9vw, 8.6rem);
-  line-height: 0.84;
+  font-size: clamp(3.9rem, 8vw, 7rem);
+  line-height: 0.88;
   text-transform: uppercase;
-  color: #3d261c;
+  color: #3a2419;
+  -webkit-text-stroke: 0.6px rgba(11, 8, 6, 0.72);
+  text-shadow: 0 10px 24px rgba(34, 20, 14, 0.08);
   text-wrap: balance;
-}
-
-.hero-description {
-  max-width: 34rem;
-  margin: 1.4rem 0 0;
-  font-size: clamp(1rem, 1.5vw, 1.18rem);
-  line-height: 1.75;
-  color: rgba(44, 29, 23, 0.78);
 }
 
 .hero-scroll-cue {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 0.78rem 1rem;
+  padding: 0.72rem 0.95rem;
   border-radius: 999px;
-  background: rgba(255, 251, 246, 0.42);
-  border: 1px solid rgba(60, 38, 26, 0.1);
-  backdrop-filter: blur(14px);
-  color: rgba(57, 38, 29, 0.74);
+  background: rgba(255, 251, 246, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: rgba(57, 38, 29, 0.5);
 }
 
 .scroll-dot {
@@ -358,8 +323,8 @@ main {
 }
 
 .intro-band {
-  margin-top: -2rem;
-  padding-top: 3rem;
+  margin-top: -0.8rem;
+  padding-top: 1.5rem;
 }
 
 .intro-layout,
@@ -367,7 +332,7 @@ main {
 .journal-layout,
 .contact-panel {
   display: grid;
-  gap: 2rem;
+  gap: 1.4rem;
 }
 
 .intro-layout {
@@ -418,7 +383,7 @@ main {
 }
 
 .chip-shell {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .chip-row {
@@ -442,7 +407,7 @@ main {
   display: grid;
   gap: 0.85rem;
   max-width: 58rem;
-  margin-bottom: 2.25rem;
+  margin-bottom: 1.35rem;
 }
 
 .story-grid,
@@ -464,14 +429,14 @@ main {
 .quote-panel,
 .contact-panel {
   border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255, 252, 248, 0.88), rgba(249, 241, 234, 0.72));
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(14px);
+  background: linear-gradient(180deg, rgba(255, 252, 248, 0.78), rgba(249, 241, 234, 0.58));
+  box-shadow: 0 16px 36px rgba(54, 33, 22, 0.05);
+  backdrop-filter: blur(10px);
 }
 
 .story-card,
 .vision-card {
-  padding: 1.35rem;
+  padding: 1.15rem;
   border-radius: var(--radius-lg);
 }
 
@@ -518,7 +483,7 @@ main {
 }
 
 .capability-card {
-  padding: 1.5rem;
+  padding: 1.25rem;
   border-radius: var(--radius-xl);
 }
 
@@ -532,19 +497,19 @@ main {
 }
 
 .vision-card {
-  min-height: 15rem;
+  min-height: 12rem;
 }
 
 .quote-section {
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .quote-panel {
-  padding: clamp(1.6rem, 3vw, 2.2rem);
+  padding: clamp(1.4rem, 2.6vw, 1.9rem);
   border-radius: var(--radius-xl);
   font-family: "Syne", sans-serif;
-  font-size: clamp(2rem, 4.2vw, 4.5rem);
-  line-height: 0.97;
+  font-size: clamp(1.8rem, 3.7vw, 3.5rem);
+  line-height: 1;
   letter-spacing: -0.07em;
   color: var(--accent);
 }
@@ -567,9 +532,9 @@ main {
 
 .blog-card {
   display: grid;
-  gap: 1rem;
+  gap: 0.8rem;
   width: 100%;
-  padding: 1.5rem;
+  padding: 1.2rem;
   border-radius: var(--radius-xl);
   color: inherit;
   text-align: left;
@@ -598,7 +563,7 @@ main {
 .contact-panel {
   grid-template-columns: 1fr auto;
   align-items: end;
-  padding: 1.6rem;
+  padding: 1.35rem;
   border-radius: var(--radius-xl);
 }
 
@@ -625,7 +590,7 @@ main {
 }
 
 .footer-mark {
-  margin-top: 1.8rem;
+  margin-top: 1rem;
   overflow: hidden;
 }
 
@@ -721,18 +686,7 @@ main {
 
 @media (max-width: 1160px) {
   .site-header {
-    grid-template-columns: auto 1fr;
-    row-gap: 0.9rem;
     border-radius: 28px;
-  }
-
-  .site-nav {
-    grid-column: 1 / -1;
-    justify-content: space-between;
-  }
-
-  .header-meta {
-    justify-content: flex-end;
   }
 
   .intro-layout,
@@ -781,21 +735,17 @@ main {
   .site-header {
     width: min(calc(100% - 1rem), 100%);
     top: 0.5rem;
-    padding: 0.85rem 0.95rem;
-  }
-
-  .header-meta {
-    display: none;
+    padding: 0.75rem 0.9rem;
   }
 
   .site-nav {
-    gap: 0.75rem;
+    gap: 0.7rem;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: flex-end;
   }
 
   .section {
-    padding: 5rem 0;
+    padding: 3.6rem 0;
   }
 
   .section-shell {
@@ -805,19 +755,15 @@ main {
   .hero-copy {
     padding-top: 6.5rem;
     padding-inline: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.9rem;
   }
 
   .hero-copy-top {
     align-items: flex-start;
   }
 
-  .hero-tail {
-    max-width: 7rem;
-  }
-
   .hero-title {
-    font-size: clamp(3.25rem, 17vw, 6rem);
+    font-size: clamp(3.2rem, 17vw, 5.25rem);
   }
 
   .quote-panel {
